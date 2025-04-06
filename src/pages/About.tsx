@@ -193,7 +193,7 @@ const About = () => {
             />
             <img 
               src="https://picsum.photos/id/1424/600/400" 
-              alt="Studio Space" an
+              alt="Studio Space" 
               className="w-full h-64 object-cover rounded-sm"
             />
             <img 
