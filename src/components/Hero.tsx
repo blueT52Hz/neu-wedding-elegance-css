@@ -7,7 +7,7 @@ const Hero = () => {
     <div className="relative h-[80vh] overflow-hidden">
       <div className="absolute inset-0">
         <img 
-          src="https://picsum.photos/id/1486312338219/2000/1300" 
+          src="https://picsum.photos/id/177/2000/1300" 
           alt="Váy cưới tuyệt đẹp" 
           className="w-full h-full object-cover"
         />
