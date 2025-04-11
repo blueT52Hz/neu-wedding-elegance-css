@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bộ Sưu Tập Váy Cưới - NEU Wedding Store</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="/" class="navbar-brand">NEU Wedding Store</a>
+
+        <button
+          class="mobile-menu-button"
+          id="mobileMenuButton"
+          aria-label="Toggle menu"
+        >
+          <span id="menuIcon">☰</span>
+        </button>
+
+        <div class="desktop-nav">
+          <a href="/" class="nav-link" data-path="/">Trang Chủ</a>
+          <a href="/about" class="nav-link" data-path="/about">Giới Thiệu</a>
+          <a href="/products" class="nav-link" data-path="/products"
+            >Sản Phẩm</a
+          >
+          <a href="/blog" class="nav-link" data-path="/blog">Blog</a>
+          <a href="/contact" class="nav-link" data-path="/contact">Liên Hệ</a>
+          <a href="/faq" class="nav-link" data-path="/faq">FAQ</a>
+          <a href="/login" class="nav-link" data-path="/login">Đăng Nhập</a>
+          <a href="/cart" class="nav-link" data-path="/cart">Giỏ Hàng</a>
+        </div>
+
+        <div class="mobile-nav" id="mobileNav">
+          <div class="mobile-nav-container">
+            <a href="/" class="mobile-nav-link" data-path="/">Trang Chủ</a>
+            <a href="/about" class="mobile-nav-link" data-path="/about"
+              >Giới Thiệu</a
+            >
+            <a href="/products" class="mobile-nav-link" data-path="/products"
+              >Sản Phẩm</a
+            >
+            <a href="/blog" class="mobile-nav-link" data-path="/blog">Blog</a>
+            <a href="/contact" class="mobile-nav-link" data-path="/contact"
+              >Liên Hệ</a
+            >
+            <a href="/faq" class="mobile-nav-link" data-path="/faq">FAQ</a>
+            <a href="/login" class="mobile-nav-link" data-path="/login"
+              >Đăng Nhập</a
+            >
+            <a href="/cart" class="mobile-nav-link" data-path="/cart"
+              >Giỏ Hàng</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Banner -->
+    <div class="products-banner">
+      <img
+        src="https://picsum.photos/id/177/2000/800"
+        alt="Bộ Sưu Tập Váy Cưới"
+        class="banner-image"
+      />
+      <div class="banner-overlay">
+        <h1 class="banner-title">Bộ Sưu Tập Váy Cưới</h1>
+      </div>
+    </div>
+
+    <!-- Products Section -->
+    <section class="products-section">
+      <div class="container">
+        <!-- Search and Filters -->
+        <div class="filters-container">
+          <div class="filters-row">
+            <input
+              type="text"
+              placeholder="Tìm kiếm váy cưới..."
+              class="search-input"
+              id="searchInput"
+            />
+            <div class="filter-selects">
+              <select class="filter-select" id="categoryFilter">
+                <option value="all">Tất cả kiểu dáng</option>
+                <option value="Váy Xòe">Váy Xòe</option>
+                <option value="Váy Đuôi Cá">Váy Đuôi Cá</option>
+                <option value="Váy Tối Giản">Váy Tối Giản</option>
+                <option value="Váy Suông">Váy Suông</option>
+              </select>
+              <select class="filter-select" id="priceFilter">
+                <option value="all">Tất cả giá</option>
+                <option value="under25">Dưới 25 triệu</option>
+                <option value="25to30">25 - 30 triệu</option>
+                <option value="over30">Trên 30 triệu</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="products-grid" id="productsGrid">
+          <!-- Products will be inserted here by JavaScript -->
+        </div>
+
+        <!-- No Products Message (hidden by default) -->
+        <div class="no-products" id="noProductsMessage" style="display: none">
+          <h3 class="no-products-title">Không tìm thấy sản phẩm phù hợp</h3>
+          <p class="no-products-text">Vui lòng thử lại với bộ lọc khác.</p>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+          <div class="pagination-buttons">
+            <button class="page-button">1</button>
+            <button class="page-button inactive">2</button>
+            <button class="page-button inactive">3</button>
+            <button class="page-button inactive">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-about">
+            <h3 class="footer-title">NEU Wedding Store</h3>
+            <p class="footer-description">
+              Mang đến vẻ đẹp tinh tế và sang trọng cho ngày trọng đại của bạn.
+            </p>
+            <div class="footer-social-links">
+              <a href="#" class="social-link">
+                <span class="sr-only">Facebook</span>
+                FB
+              </a>
+              <a href="#" class="social-link">
+                <span class="sr-only">Instagram</span>
+                IG
+              </a>
+              <a href="#" class="social-link">
+                <span class="sr-only">Pinterest</span>
+                PT
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="footer-section-title">Liên Kết Nhanh</h3>
+            <ul class="footer-links">
+              <li><a href="/" class="footer-link">Trang Chủ</a></li>
+              <li><a href="/about" class="footer-link">Giới Thiệu</a></li>
+              <li><a href="/products" class="footer-link">Sản Phẩm</a></li>
+              <li><a href="/blog" class="footer-link">Blog</a></li>
+              <li><a href="/contact" class="footer-link">Liên Hệ</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="footer-section-title">Thông Tin Thêm</h3>
+            <ul class="footer-links">
+              <li><a href="/faq" class="footer-link">FAQ</a></li>
+              <li><a href="/login" class="footer-link">Tài Khoản</a></li>
+              <li><a href="/careers" class="footer-link">Tuyển Dụng</a></li>
+              <li><a href="#" class="footer-link">Chính Sách Bảo Mật</a></li>
+              <li><a href="#" class="footer-link">Điều Khoản Sử Dụng</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="footer-section-title">Liên Hệ</h3>
+            <address class="footer-address">
+              <p>123 Đường Láng, Đống Đa, Hà Nội</p>
+              <p>Email: info@neuwedding.com</p>
+              <p>Phone: (024) 1234 5678</p>
+              <p>Giờ làm việc: 9:00 - 21:00, Thứ 2 - Chủ Nhật</p>
+            </address>
+          </div>
+        </div>
+
+        <div class="footer-copyright">
+          <p class="copyright-text">
+            &copy; <span id="current-year"></span> NEU Wedding Store. Tất cả
+            quyền được bảo lưu.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById("mobileMenuButton");
+      const mobileNav = document.getElementById("mobileNav");
+      const menuIcon = document.getElementById("menuIcon");
+
+      let isMenuOpen = false;
+
+      mobileMenuButton.addEventListener("click", () => {
+        isMenuOpen = !isMenuOpen;
+        mobileNav.classList.toggle("open", isMenuOpen);
+        menuIcon.textContent = isMenuOpen ? "✕" : "☰";
+      });
+
+      // Active link highlighting
+      function setActiveLinks() {
+        const currentPath = window.location.pathname;
+
+        // Desktop links
+        document.querySelectorAll(".nav-link").forEach((link) => {
+          const linkPath = link.getAttribute("data-path");
+          if (
+            (linkPath === "/" && currentPath === "/") ||
+            (linkPath !== "/" && currentPath.startsWith(linkPath))
+          ) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
+        });
+
+        // Mobile links
+        document.querySelectorAll(".mobile-nav-link").forEach((link) => {
+          const linkPath = link.getAttribute("data-path");
+          if (
+            (linkPath === "/" && currentPath === "/") ||
+            (linkPath !== "/" && currentPath.startsWith(linkPath))
+          ) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
+        });
+      }
+
+      // Close mobile menu when clicking a link
+      document.querySelectorAll(".mobile-nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          isMenuOpen = false;
+          mobileNav.classList.remove("open");
+          menuIcon.textContent = "☰";
+        });
+      });
+
+      // Initialize active links
+      window.addEventListener("load", setActiveLinks);
+      window.addEventListener("popstate", setActiveLinks);
+    </script>
+
+    <script>
+      // Set current year in copyright
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    </script>
+
+    <script>
+      // Product data
+      const products = [
+        {
+          id: 1,
+          name: "Váy Cưới Ren Princess",
+          image: "https://picsum.photos/id/64/600/800",
+          price: "25.000.000 ₫",
+          category: "Váy Xòe",
+          material: "Ren",
+          style: "Cổ điển",
+        },
+        {
+          id: 2,
+          name: "Váy Cưới Đuôi Cá Elegance",
+          image: "https://picsum.photos/id/65/600/800",
+          price: "30.000.000 ₫",
+          category: "Váy Đuôi Cá",
+          material: "Satin",
+          style: "Hiện đại",
+        },
+        {
+          id: 3,
+          name: "Váy Cưới Minimalist Pearl",
+          image: "https://picsum.photos/id/76/600/800",
+          price: "22.000.000 ₫",
+          category: "Váy Tối Giản",
+          material: "Lụa",
+          style: "Tối giản",
+        },
+        {
+          id: 4,
+          name: "Váy Cưới Công Chúa Royal",
+          image: "https://picsum.photos/id/223/600/800",
+          price: "35.000.000 ₫",
+          category: "Váy Xòe",
+          material: "Organza",
+          style: "Cổ điển",
+        },
+        {
+          id: 5,
+          name: "Váy Cưới Bohemian Dream",
+          image: "https://picsum.photos/id/325/600/800",
+          price: "28.000.000 ₫",
+          category: "Váy Suông",
+          material: "Voan",
+          style: "Bohemian",
+        },
+        {
+          id: 6,
+          name: "Váy Cưới Vintage Lace",
+          image: "https://picsum.photos/id/366/600/800",
+          price: "32.000.000 ₫",
+          category: "Váy Xòe",
+          material: "Ren",
+          style: "Vintage",
+        },
+        {
+          id: 7,
+          name: "Váy Cưới Modern Romance",
+          image: "https://picsum.photos/id/367/600/800",
+          price: "27.000.000 ₫",
+          category: "Váy Đuôi Cá",
+          material: "Satin",
+          style: "Hiện đại",
+        },
+        {
+          id: 8,
+          name: "Váy Cưới Simple Elegance",
+          image: "https://picsum.photos/id/368/600/800",
+          price: "20.000.000 ₫",
+          category: "Váy Tối Giản",
+          material: "Lụa",
+          style: "Tối giản",
+        },
+        {
+          id: 9,
+          name: "Váy Cưới Fairy Tale",
+          image: "https://picsum.photos/id/369/600/800",
+          price: "38.000.000 ₫",
+          category: "Váy Xòe",
+          material: "Organza",
+          style: "Cổ điển",
+        },
+        {
+          id: 10,
+          name: "Váy Cưới Beach Beauty",
+          image: "https://picsum.photos/id/370/600/800",
+          price: "23.000.000 ₫",
+          category: "Váy Suông",
+          material: "Voan",
+          style: "Bohemian",
+        },
+        {
+          id: 11,
+          name: "Váy Cưới Luxury Pearl",
+          image: "https://picsum.photos/id/371/600/800",
+          price: "40.000.000 ₫",
+          category: "Váy Xòe",
+          material: "Ren",
+          style: "Cổ điển",
+        },
+        {
+          id: 12,
+          name: "Váy Cưới Mermaid Dream",
+          image: "https://picsum.photos/id/372/600/800",
+          price: "33.000.000 ₫",
+          category: "Váy Đuôi Cá",
+          material: "Satin",
+          style: "Hiện đại",
+        },
+      ];
+
+      // DOM elements
+      const productsGrid = document.getElementById("productsGrid");
+      const searchInput = document.getElementById("searchInput");
+      const categoryFilter = document.getElementById("categoryFilter");
+      const priceFilter = document.getElementById("priceFilter");
+      const noProductsMessage = document.getElementById("noProductsMessage");
+
+      // Render products
+      function renderProducts(productsToRender) {
+        productsGrid.innerHTML = "";
+
+        if (productsToRender.length === 0) {
+          noProductsMessage.style.display = "block";
+          return;
+        }
+
+        noProductsMessage.style.display = "none";
+
+        productsToRender.forEach((product) => {
+          const productCard = document.createElement("div");
+          productCard.className = "product-card";
+          productCard.innerHTML = `
+                    <a href="/products/${product.id}">
+                        <div class="product-image-container">
+                            <img src="${product.image}" alt="${product.name}" class="product-image">
+                            <div class="product-image-overlay"></div>
+                        </div>
+                        <div class="product-view-button">
+                            <span class="view-button">Xem Chi Tiết</span>
+                        </div>
+                        <div class="product-details">
+                            <div>
+                                <h3 class="product-name">${product.name}</h3>
+                                <p class="product-category">${product.category}</p>
+                            </div>
+                            <p class="product-price">${product.price}</p>
+                        </div>
+                    </a>
+                `;
+          productsGrid.appendChild(productCard);
+        });
+      }
+
+      // Filter products
+      function filterProducts() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const category = categoryFilter.value;
+        const price = priceFilter.value;
+
+        const filteredProducts = products.filter((product) => {
+          // Search term filter
+          const matchesSearch =
+            product.name.toLowerCase().includes(searchTerm) ||
+            product.category.toLowerCase().includes(searchTerm) ||
+            product.material.toLowerCase().includes(searchTerm) ||
+            product.style.toLowerCase().includes(searchTerm);
+
+          // Category filter
+          const matchesCategory =
+            category === "all" || product.category === category;
+
+          // Price filter
+          const priceValue = parseInt(product.price.replace(/\D/g, ""));
+          let matchesPrice = true;
+
+          if (price === "under25") {
+            matchesPrice = priceValue < 25000000;
+          } else if (price === "25to30") {
+            matchesPrice = priceValue >= 25000000 && priceValue <= 30000000;
+          } else if (price === "over30") {
+            matchesPrice = priceValue > 30000000;
+          }
+
+          return matchesSearch && matchesCategory && matchesPrice;
+        });
+
+        renderProducts(filteredProducts);
+      }
+
+      // Event listeners
+      searchInput.addEventListener("input", filterProducts);
+      categoryFilter.addEventListener("change", filterProducts);
+      priceFilter.addEventListener("change", filterProducts);
+
+      // Initial render
+      renderProducts(products);
+    </script>
+  </body>
+</html>

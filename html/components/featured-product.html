@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEU Wedding Store - Sản phẩm nổi bật</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <section class="featured-products">
+        <div class="featured-products-container">
+            <div class="featured-products-header">
+                <h2 class="featured-products-title">Bộ Sưu Tập Nổi Bật</h2>
+                <p class="featured-products-description">
+                    Khám phá những mẫu váy cưới được yêu thích nhất của chúng tôi, được thiết kế với sự tỉ mỉ và chất liệu cao cấp.
+                </p>
+            </div>
+            
+            <div class="featured-products-grid" id="featured-products-grid">
+                <!-- Products will be inserted here by JavaScript -->
+            </div>
+            
+            <div class="featured-products-footer">
+                <a href="/products" class="view-all-btn">Xem Tất Cả Sản Phẩm</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Featured Products Data
+        const featuredProducts = [
+        {
+                id: 1,
+                name: "Váy Cưới Ren Princess",
+                image: "https://picsum.photos/id/64/600/800",
+                price: "25.000.000 ₫",
+                category: "Váy Xòe",
+                material: "Ren",
+                style: "Cổ điển"
+            },
+            {
+                id: 2,
+                name: "Váy Cưới Đuôi Cá Elegance",
+                image: "https://picsum.photos/id/65/600/800",
+                price: "30.000.000 ₫",
+                category: "Váy Đuôi Cá",
+                material: "Satin",
+                style: "Hiện đại"
+            },
+            {
+                id: 3,
+                name: "Váy Cưới Minimalist Pearl",
+                image: "https://picsum.photos/id/76/600/800",
+                price: "22.000.000 ₫",
+                category: "Váy Tối Giản",
+                material: "Lụa",
+                style: "Tối giản"
+            },
+            {
+                id: 4,
+                name: "Váy Cưới Công Chúa Royal",
+                image: "https://picsum.photos/id/223/600/800",
+                price: "35.000.000 ₫",
+                category: "Váy Xòe",
+                material: "Organza",
+                style: "Cổ điển"
+            },
+            {
+                id: 5,
+                name: "Váy Cưới Bohemian Dream",
+                image: "https://picsum.photos/id/325/600/800",
+                price: "28.000.000 ₫",
+                category: "Váy Suông",
+                material: "Voan",
+                style: "Bohemian"
+            },
+            {
+                id: 6,
+                name: "Váy Cưới Vintage Lace",
+                image: "https://picsum.photos/id/366/600/800",
+                price: "32.000.000 ₫",
+                category: "Váy Xòe",
+                material: "Ren",
+                style: "Vintage"
+            },
+        ];
+
+        // Render Products
+        const productsGrid = document.getElementById('featured-products-grid');
+        
+        featuredProducts.forEach(product => {
+            const productCard = document.createElement('div');
+            productCard.className = 'product-card';
+            productCard.innerHTML = `
+                    <a href="/products/${product.id}">
+                        <div class="product-image-container">
+                            <img src="${product.image}" alt="${product.name}" class="product-image">
+                            <div class="product-image-overlay"></div>
+                        </div>
+                        <div class="product-view-button">
+                            <span class="view-button">Xem Chi Tiết</span>
+                        </div>
+                        <div class="product-details">
+                            <div>
+                                <h3 class="product-name">${product.name}</h3>
+                                <p class="product-category">${product.category}</p>
+                            </div>
+                            <p class="product-price">${product.price}</p>
+                        </div>
+                    </a>
+                `;
+            productsGrid.appendChild(productCard);
+        });
+    </script>
+</body>
+</html>

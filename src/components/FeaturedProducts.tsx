@@ -36,8 +36,8 @@ const FeaturedProducts = () => {
   ];
 
   return (
-    <section className="section-padding bg-white">
-      <div className="container-custom">
+    <section className="featured-products section-padding bg-white">
+      <div className="featured-products-container container-custom">
         <div className="text-center mb-12">
           <h2 className="heading-lg mb-4">Bộ Sưu Tập Nổi Bật</h2>
           <p className="body-md max-w-3xl mx-auto text-gray-600">

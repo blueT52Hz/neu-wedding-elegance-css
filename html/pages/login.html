@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng Nhập / Đăng Ký - NEU Wedding Store</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="/" class="navbar-brand">NEU Wedding Store</a>
+
+        <button
+          class="mobile-menu-button"
+          id="mobileMenuButton"
+          aria-label="Toggle menu"
+        >
+          <span id="menuIcon">☰</span>
+        </button>
+
+        <div class="desktop-nav">
+          <a href="/" class="nav-link" data-path="/">Trang Chủ</a>
+          <a href="/about" class="nav-link" data-path="/about">Giới Thiệu</a>
+          <a href="/products" class="nav-link" data-path="/products"
+            >Sản Phẩm</a
+          >
+          <a href="/blog" class="nav-link" data-path="/blog">Blog</a>
+          <a href="/contact" class="nav-link" data-path="/contact">Liên Hệ</a>
+          <a href="/faq" class="nav-link" data-path="/faq">FAQ</a>
+          <a href="/login" class="nav-link" data-path="/login">Đăng Nhập</a>
+          <a href="/cart" class="nav-link" data-path="/cart">Giỏ Hàng</a>
+        </div>
+
+        <div class="mobile-nav" id="mobileNav">
+          <div class="mobile-nav-container">
+            <a href="/" class="mobile-nav-link" data-path="/">Trang Chủ</a>
+            <a href="/about" class="mobile-nav-link" data-path="/about"
+              >Giới Thiệu</a
+            >
+            <a href="/products" class="mobile-nav-link" data-path="/products"
+              >Sản Phẩm</a
+            >
+            <a href="/blog" class="mobile-nav-link" data-path="/blog">Blog</a>
+            <a href="/contact" class="mobile-nav-link" data-path="/contact"
+              >Liên Hệ</a
+            >
+            <a href="/faq" class="mobile-nav-link" data-path="/faq">FAQ</a>
+            <a href="/login" class="mobile-nav-link" data-path="/login"
+              >Đăng Nhập</a
+            >
+            <a href="/cart" class="mobile-nav-link" data-path="/cart"
+              >Giỏ Hàng</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div>
+      <!-- Banner -->
+      <div class="auth-banner">
+        <div class="auth-banner-image">
+          <img
+            src="https://picsum.photos/id/1045/2000/800"
+            alt="Đăng Nhập / Đăng Ký"
+          />
+          <div class="auth-banner-overlay"></div>
+        </div>
+        <div class="auth-banner-content">
+          <h1 class="heading-xl text-white" id="formTitle">Đăng Nhập</h1>
+        </div>
+      </div>
+
+      <section class="section-padding bg-white">
+        <div class="container">
+          <div class="auth-form-container">
+            <div class="auth-form-wrapper">
+              <!-- Form Tabs -->
+              <div class="form-tabs">
+                <button
+                  class="form-tab active"
+                  id="loginTab"
+                  onclick="switchForm(true)"
+                >
+                  Đăng Nhập
+                </button>
+                <button
+                  class="form-tab inactive"
+                  id="registerTab"
+                  onclick="switchForm(false)"
+                >
+                  Đăng Ký
+                </button>
+              </div>
+
+              <!-- Login Form -->
+              <form id="loginForm" onsubmit="handleSubmit(event, true)">
+                <div class="form-group">
+                  <label for="loginEmail" class="form-label">Email *</label>
+                  <input
+                    type="email"
+                    id="loginEmail"
+                    name="email"
+                    required
+                    class="form-input"
+                  />
+                </div>
+                <div class="form-group mb-6">
+                  <div class="flex items-center justify-between mb-2">
+                    <label for="loginPassword" class="form-label"
+                      >Mật Khẩu *</label
+                    >
+                    <a
+                      href="#"
+                      class="text-sm text-wedding-gold hover:underline"
+                      >Quên mật khẩu?</a
+                    >
+                  </div>
+                  <input
+                    type="password"
+                    id="loginPassword"
+                    name="password"
+                    required
+                    class="form-input"
+                  />
+                </div>
+                <button type="submit" class="btn-primary mb-4">
+                  Đăng Nhập
+                </button>
+                <p class="text-sm text-center">
+                  Chưa có tài khoản?
+                  <button
+                    type="button"
+                    onclick="switchForm(false)"
+                    class="btn-secondary"
+                  >
+                    Đăng ký ngay
+                  </button>
+                </p>
+              </form>
+
+              <!-- Register Form (hidden by default) -->
+              <form
+                id="registerForm"
+                style="display: none"
+                onsubmit="handleSubmit(event, false)"
+              >
+                <div class="form-group">
+                  <label for="registerName" class="form-label"
+                    >Họ và Tên *</label
+                  >
+                  <input
+                    type="text"
+                    id="registerName"
+                    name="name"
+                    required
+                    class="form-input"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="registerEmail" class="form-label">Email *</label>
+                  <input
+                    type="email"
+                    id="registerEmail"
+                    name="email"
+                    required
+                    class="form-input"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="registerPassword" class="form-label"
+                    >Mật Khẩu *</label
+                  >
+                  <input
+                    type="password"
+                    id="registerPassword"
+                    name="password"
+                    required
+                    class="form-input"
+                  />
+                </div>
+                <div class="form-group mb-6">
+                  <label for="registerConfirmPassword" class="form-label"
+                    >Xác Nhận Mật Khẩu *</label
+                  >
+                  <input
+                    type="password"
+                    id="registerConfirmPassword"
+                    name="confirmPassword"
+                    required
+                    class="form-input"
+                  />
+                </div>
+                <button type="submit" class="btn-primary mb-4">Đăng Ký</button>
+                <p class="text-sm text-center">
+                  Đã có tài khoản?
+                  <button
+                    type="button"
+                    onclick="switchForm(true)"
+                    class="btn-secondary"
+                  >
+                    Đăng nhập
+                  </button>
+                </p>
+              </form>
+
+              <!-- Social Login -->
+              <div class="social-divider">
+                <div class="social-divider-line"></div>
+                <span class="social-divider-text">hoặc đăng nhập với</span>
+              </div>
+              <div class="social-buttons">
+                <button class="social-button">
+                  <span>Facebook</span>
+                </button>
+                <button class="social-button">
+                  <span>Google</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-about">
+            <h3 class="footer-title">NEU Wedding Store</h3>
+            <p class="footer-description">
+              Mang đến vẻ đẹp tinh tế và sang trọng cho ngày trọng đại của bạn.
+            </p>
+            <div class="footer-social-links">
+              <a href="#" class="social-link">
+                <span class="sr-only">Facebook</span>
+                FB
+              </a>
+              <a href="#" class="social-link">
+                <span class="sr-only">Instagram</span>
+                IG
+              </a>
+              <a href="#" class="social-link">
+                <span class="sr-only">Pinterest</span>
+                PT
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="footer-section-title">Liên Kết Nhanh</h3>
+            <ul class="footer-links">
+              <li><a href="/" class="footer-link">Trang Chủ</a></li>
+              <li><a href="/about" class="footer-link">Giới Thiệu</a></li>
+              <li><a href="/products" class="footer-link">Sản Phẩm</a></li>
+              <li><a href="/blog" class="footer-link">Blog</a></li>
+              <li><a href="/contact" class="footer-link">Liên Hệ</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="footer-section-title">Thông Tin Thêm</h3>
+            <ul class="footer-links">
+              <li><a href="/faq" class="footer-link">FAQ</a></li>
+              <li><a href="/login" class="footer-link">Tài Khoản</a></li>
+              <li><a href="/careers" class="footer-link">Tuyển Dụng</a></li>
+              <li><a href="#" class="footer-link">Chính Sách Bảo Mật</a></li>
+              <li><a href="#" class="footer-link">Điều Khoản Sử Dụng</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="footer-section-title">Liên Hệ</h3>
+            <address class="footer-address">
+              <p>123 Đường Láng, Đống Đa, Hà Nội</p>
+              <p>Email: info@neuwedding.com</p>
+              <p>Phone: (024) 1234 5678</p>
+              <p>Giờ làm việc: 9:00 - 21:00, Thứ 2 - Chủ Nhật</p>
+            </address>
+          </div>
+        </div>
+
+        <div class="footer-copyright">
+          <p class="copyright-text">
+            &copy; <span id="current-year"></span> NEU Wedding Store. Tất cả
+            quyền được bảo lưu.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Form state
+      let isLogin = true;
+
+      // Switch between login and register forms
+      function switchForm(showLogin) {
+        isLogin = showLogin;
+
+        // Update form visibility
+        document.getElementById("loginForm").style.display = showLogin
+          ? "block"
+          : "none";
+        document.getElementById("registerForm").style.display = showLogin
+          ? "none"
+          : "block";
+
+        // Update tab styles
+        document.getElementById("loginTab").className = showLogin
+          ? "form-tab active"
+          : "form-tab inactive";
+        document.getElementById("registerTab").className = showLogin
+          ? "form-tab inactive"
+          : "form-tab active";
+
+        // Update banner title
+        document.getElementById("formTitle").textContent = showLogin
+          ? "Đăng Nhập"
+          : "Đăng Ký";
+
+        // Clear form inputs
+        if (showLogin) {
+          document.getElementById("registerName").value = "";
+          document.getElementById("registerEmail").value = "";
+          document.getElementById("registerPassword").value = "";
+          document.getElementById("registerConfirmPassword").value = "";
+        } else {
+          document.getElementById("loginEmail").value = "";
+          document.getElementById("loginPassword").value = "";
+        }
+      }
+
+      // Handle form submission
+      function handleSubmit(event, isLoginForm) {
+        event.preventDefault();
+
+        if (isLoginForm) {
+          // Login form submitted
+          const email = document.getElementById("loginEmail").value;
+          const password = document.getElementById("loginPassword").value;
+
+          console.log("Login submitted:", { email, password });
+          alert("Đăng nhập thành công!");
+        } else {
+          // Register form submitted
+          const name = document.getElementById("registerName").value;
+          const email = document.getElementById("registerEmail").value;
+          const password = document.getElementById("registerPassword").value;
+          const confirmPassword = document.getElementById(
+            "registerConfirmPassword"
+          ).value;
+
+          if (password !== confirmPassword) {
+            alert("Mật khẩu và xác nhận mật khẩu không khớp!");
+            return;
+          }
+
+          console.log("Register submitted:", { name, email, password });
+          alert("Đăng ký thành công! Vui lòng đăng nhập.");
+
+          // Switch to login form after successful registration
+          switchForm(true);
+        }
+      }
+    </script>
+
+    <script>
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById("mobileMenuButton");
+      const mobileNav = document.getElementById("mobileNav");
+      const menuIcon = document.getElementById("menuIcon");
+
+      let isMenuOpen = false;
+
+      mobileMenuButton.addEventListener("click", () => {
+        isMenuOpen = !isMenuOpen;
+        mobileNav.classList.toggle("open", isMenuOpen);
+        menuIcon.textContent = isMenuOpen ? "✕" : "☰";
+      });
+
+      // Active link highlighting
+      function setActiveLinks() {
+        const currentPath = window.location.pathname;
+
+        // Desktop links
+        document.querySelectorAll(".nav-link").forEach((link) => {
+          const linkPath = link.getAttribute("data-path");
+          if (
+            (linkPath === "/" && currentPath === "/") ||
+            (linkPath !== "/" && currentPath.startsWith(linkPath))
+          ) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
+        });
+
+        // Mobile links
+        document.querySelectorAll(".mobile-nav-link").forEach((link) => {
+          const linkPath = link.getAttribute("data-path");
+          if (
+            (linkPath === "/" && currentPath === "/") ||
+            (linkPath !== "/" && currentPath.startsWith(linkPath))
+          ) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
+        });
+      }
+
+      // Close mobile menu when clicking a link
+      document.querySelectorAll(".mobile-nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          isMenuOpen = false;
+          mobileNav.classList.remove("open");
+          menuIcon.textContent = "☰";
+        });
+      });
+
+      // Initialize active links
+      window.addEventListener("load", setActiveLinks);
+      window.addEventListener("popstate", setActiveLinks);
+    </script>
+
+    <script>
+      // Set current year in copyright
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
+</html>
