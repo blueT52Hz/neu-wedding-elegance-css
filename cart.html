@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giỏ Hàng - NEU Wedding Store</title>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      body {
+        line-height: 1.6;
+        color: #333;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      button {
+        cursor: pointer;
+      }
+
+      /* Utility Classes */
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .section-padding {
+        padding: 80px 0;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .flex {
+        display: flex;
+      }
+
+      .items-center {
+        align-items: center;
+      }
+
+      .justify-center {
+        justify-content: center;
+      }
+
+      .justify-between {
+        justify-content: space-between;
+      }
+
+      .flex-col {
+        flex-direction: column;
+      }
+
+      .mx-auto {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .mb-4 {
+        margin-bottom: 16px;
+      }
+
+      .mb-6 {
+        margin-bottom: 24px;
+      }
+
+      .mb-8 {
+        margin-bottom: 32px;
+      }
+
+      .mt-4 {
+        margin-top: 16px;
+      }
+
+      .mt-8 {
+        margin-top: 32px;
+      }
+
+      .w-full {
+        width: 100%;
+      }
+
+      .max-w-2xl {
+        max-width: 42rem;
+      }
+
+      .rounded-sm {
+        border-radius: 4px;
+      }
+
+      /* Typography */
+      .heading-xl {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      .heading-lg {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      .text-sm {
+        font-size: 14px;
+      }
+
+      .text-xs {
+        font-size: 12px;
+      }
+
+      .font-medium {
+        font-weight: 500;
+      }
+
+      .font-bold {
+        font-weight: 700;
+      }
+
+      .font-serif {
+        font-family: serif;
+      }
+
+      /* Colors */
+      .text-white {
+        color: white;
+      }
+
+      .text-gray-500 {
+        color: #6b7280;
+      }
+
+      .text-gray-600 {
+        color: #6b7280;
+      }
+
+      .text-green-600 {
+        color: #16a34a;
+      }
+
+      .text-red-500 {
+        color: #ef4444;
+      }
+
+      .text-red-700 {
+        color: #b91c1c;
+      }
+
+      .bg-white {
+        background-color: white;
+      }
+
+      .bg-gray-100 {
+        background-color: #f3f4f6;
+      }
+
+      .bg-gray-800 {
+        background-color: #1f2937;
+      }
+
+      .bg-wedding-cream {
+        background-color: #f8f4ee;
+      }
+
+      .bg-wedding-gold {
+        background-color: #b89f7b;
+      }
+
+      .text-wedding-gold {
+        color: #b89f7b;
+      }
+
+      /* Banner */
+      .cart-banner {
+        position: relative;
+        height: 40vh;
+        overflow: hidden;
+      }
+
+      .cart-banner-image {
+        position: absolute;
+        inset: 0;
+      }
+
+      .cart-banner-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .cart-banner-overlay {
+        position: absolute;
+        inset: 0;
+        background-color: black;
+        opacity: 0.4;
+      }
+
+      .cart-banner-content {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Cart Layout */
+      .cart-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+      }
+
+      @media (min-width: 1024px) {
+        .cart-layout {
+          flex-direction: row;
+        }
+
+        .cart-items-section {
+          width: 66.666%;
+        }
+
+        .order-summary-section {
+          width: 33.333%;
+        }
+      }
+
+      /* Cart Items */
+      .cart-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .cart-table th {
+        padding: 12px 16px;
+        text-align: left;
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      .cart-table td {
+        padding: 16px;
+        border-bottom: 1px solid #e5e7eb;
+        vertical-align: middle;
+      }
+
+      .cart-item {
+        display: flex;
+        align-items: center;
+      }
+
+      .cart-item-image {
+        width: 80px;
+        height: 80px;
+        margin-right: 16px;
+      }
+
+      .cart-item-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .cart-item-details h3 {
+        font-weight: 500;
+      }
+
+      .cart-item-details p {
+        font-size: 14px;
+        color: #6b7280;
+      }
+
+      .quantity-control {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .quantity-btn {
+        width: 32px;
+        height: 32px;
+        border: 1px solid #d1d5db;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+      }
+
+      .quantity-btn:hover {
+        background-color: #f9fafb;
+      }
+
+      .quantity-input {
+        width: 48px;
+        height: 32px;
+        border-top: 1px solid #d1d5db;
+        border-bottom: 1px solid #d1d5db;
+        text-align: center;
+      }
+
+      .remove-btn {
+        background: none;
+        border: none;
+        font-size: 18px;
+      }
+
+      .remove-btn:hover {
+        color: #b91c1c;
+      }
+
+      /* Cart Actions */
+      .cart-actions {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 32px;
+      }
+
+      .btn-secondary {
+        display: inline-block;
+        padding: 12px 24px;
+        border: 1px solid #b89f7b;
+        color: #b89f7b;
+        border-radius: 4px;
+        transition: all 0.3s;
+      }
+
+      .btn-secondary:hover {
+        background-color: #f0e6d6;
+      }
+
+      /* Order Summary */
+      .order-summary {
+        background-color: #f8f4ee;
+        padding: 24px;
+        border-radius: 4px;
+      }
+
+      .summary-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 16px;
+      }
+
+      .summary-total {
+        border-top: 1px solid #d1d5db;
+        padding-top: 16px;
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      /* Coupon */
+      .coupon-container {
+        margin-bottom: 24px;
+      }
+
+      .coupon-input {
+        display: flex;
+        margin-bottom: 8px;
+      }
+
+      .coupon-input input {
+        flex: 1;
+        padding: 8px 16px;
+        border: 1px solid #d1d5db;
+        border-radius: 4px;
+      }
+
+      .coupon-input button {
+        margin-left: 8px;
+        padding: 8px 16px;
+        background-color: #1f2937;
+        color: white;
+        border: none;
+        border-radius: 4px;
+      }
+
+      .coupon-input button:hover {
+        background-color: #111827;
+      }
+
+      .coupon-note {
+        font-size: 12px;
+        color: #6b7280;
+      }
+
+      /* Checkout Button */
+      .btn-primary {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        background-color: #b89f7b;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 16px;
+        transition: background-color 0.3s;
+      }
+
+      .btn-primary:hover {
+        background-color: #a58e6c;
+      }
+
+      /* Payment Methods */
+      .payment-methods {
+        font-size: 14px;
+        color: #6b7280;
+      }
+
+      .payment-badges {
+        display: flex;
+        gap: 8px;
+        margin-top: 8px;
+        flex-wrap: wrap;
+      }
+
+      .payment-badge {
+        padding: 4px 8px;
+        border: 1px solid #d1d5db;
+        border-radius: 4px;
+        font-size: 12px;
+      }
+
+      /* Empty Cart */
+      .empty-cart {
+        text-align: center;
+        padding: 64px 0;
+      }
+
+      /* Related Products */
+      .related-products {
+        padding: 64px 0;
+        background-color: white;
+      }
+
+      .products-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      @media (min-width: 640px) {
+        .products-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .products-grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+
+      .product-card {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .product-image {
+        aspect-ratio: 3/4;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 4px;
+        background-color: #f3f4f6;
+      }
+
+      .product-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s;
+      }
+
+      .product-card:hover .product-image img {
+        transform: scale(1.05);
+      }
+
+      .product-overlay {
+        position: absolute;
+        inset: 0;
+        background-color: black;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      .product-card:hover .product-overlay {
+        opacity: 0.1;
+      }
+
+      .product-info {
+        margin-top: 16px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .product-title {
+        font-family: serif;
+        font-size: 14px;
+      }
+
+      .product-category {
+        margin-top: 4px;
+        font-size: 12px;
+        color: #6b7280;
+      }
+
+      .product-price {
+        font-size: 14px;
+        font-weight: 500;
+        color: #b89f7b;
+      }
+
+      /* Accessibility */
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="./index.html" class="navbar-brand">NEU Wedding Store</a>
+
+        <button
+          class="mobile-menu-button"
+          id="mobileMenuButton"
+          aria-label="Toggle menu"
+        >
+          <span id="menuIcon">☰</span>
+        </button>
+
+        <div class="desktop-nav">
+          <a href="./index.html" class="nav-link" data-path="/">Trang Chủ</a>
+          <a href="./about.html" class="nav-link" data-path="/about"
+            >Giới Thiệu</a
+          >
+          <a href="./product.html" class="nav-link" data-path="/product"
+            >Sản Phẩm</a
+          >
+          <a href="./blog.html" class="nav-link" data-path="/blog">Blog</a>
+          <a href="./contact.html" class="nav-link" data-path="/contact"
+            >Liên Hệ</a
+          >
+          <a href="./faq.html" class="nav-link" data-path="/faq">FAQ</a>
+          <a href="./login.html" class="nav-link" data-path="/login"
+            >Đăng Nhập</a
+          >
+          <a
+            href="./cart.html"
+            class="nav-link nav-link-active"
+            data-path="/cart"
+            >Giỏ Hàng</a
+          >
+        </div>
+
+        <div class="mobile-nav" id="mobileNav">
+          <div class="mobile-nav-container">
+            <a href="./index.html" class="mobile-nav-link" data-path="/"
+              >Trang Chủ</a
+            >
+            <a href="./about.html" class="mobile-nav-link" data-path="/about"
+              >Giới Thiệu</a
+            >
+            <a
+              href="./product.html"
+              class="mobile-nav-link"
+              data-path="/products"
+              >Sản Phẩm</a
+            >
+            <a href="./blog.html" class="mobile-nav-link" data-path="/blog"
+              >Blog</a
+            >
+            <a
+              href="./contact.html"
+              class="mobile-nav-link"
+              data-path="/contact"
+              >Liên Hệ</a
+            >
+            <a href="./faq.html" class="mobile-nav-link" data-path="/faq"
+              >FAQ</a
+            >
+            <a href="./login.html" class="mobile-nav-link" data-path="/login"
+              >Đăng Nhập</a
+            >
+            <a
+              href="./career.html"
+              class="mobile-nav-link nav-link-active"
+              data-path="/cart"
+              >Giỏ Hàng</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div>
+      <!-- Banner -->
+      <div class="cart-banner">
+        <div class="cart-banner-image">
+          <img src="https://picsum.photos/id/1056/2000/800" alt="Giỏ Hàng" />
+          <div class="cart-banner-overlay"></div>
+        </div>
+        <div class="cart-banner-content">
+          <h1 class="heading-xl text-white">Giỏ Hàng</h1>
+        </div>
+      </div>
+
+      <section class="section-padding bg-white">
+        <div class="container">
+          <div id="cartContent">
+            <!-- Cart content will be rendered by JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Related Products -->
+      <style>
+        .related-products .products-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 16px;
+        }
+
+        .related-products .product-card {
+          background-color: white;
+          border-radius: 4px;
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .related-products .product-image {
+          aspect-ratio: 1;
+          background-color: #f5f5f5;
+          border-radius: 4px 4px 0 0;
+          overflow: hidden;
+        }
+
+        .related-products .product-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .related-products .product-info {
+          padding: 16px;
+        }
+
+        .related-products .product-title {
+          font-size: 16px;
+          font-weight: 500;
+        }
+
+        .related-products .product-category {
+          font-size: 14px;
+          color: #6b7280;
+        }
+
+        .related-products .product-price {
+          font-size: 16px;
+          font-weight: 500;
+          color: #b89f7b;
+        }
+      </style>
+
+      <section class="featured-products">
+        <div class="featured-products-container">
+          <div class="featured-products-header">
+            <h2 class="featured-products-title">Có Thể Bạn Cũng Thích</h2>
+          </div>
+
+          <div class="featured-products-grid" id="featured-products-grid">
+            <!-- Products will be inserted here by JavaScript -->
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-about">
+            <h3 class="footer-title">NEU Wedding Store</h3>
+            <p class="footer-description">
+              Mang đến vẻ đẹp tinh tế và sang trọng cho ngày trọng đại của bạn.
+            </p>
+            <div class="footer-social-links">
+              <a href="#" class="social-link">
+                <span class="sr-only">Facebook</span>
+                FB
+              </a>
+              <a href="#" class="social-link">
+                <span class="sr-only">Instagram</span>
+                IG
+              </a>
+              <a href="#" class="social-link">
+                <span class="sr-only">Pinterest</span>
+                PT
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="footer-section-title">Liên Kết Nhanh</h3>
+            <ul class="footer-links">
+              <li><a href="./index.html" class="footer-link">Trang Chủ</a></li>
+              <li><a href="./about.html" class="footer-link">Giới Thiệu</a></li>
+              <li><a href="./product.html" class="footer-link">Sản Phẩm</a></li>
+              <li><a href="./blog.html" class="footer-link">Blog</a></li>
+              <li><a href="./contact.html" class="footer-link">Liên Hệ</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="footer-section-title">Thông Tin Thêm</h3>
+            <ul class="footer-links">
+              <li><a href="./faq.html" class="footer-link">FAQ</a></li>
+              <li><a href="./faq.html" class="footer-link">Tài Khoản</a></li>
+              <li>
+                <a href="./career.html" class="footer-link">Tuyển Dụng</a>
+              </li>
+              <li><a href="#" class="footer-link">Chính Sách Bảo Mật</a></li>
+              <li><a href="#" class="footer-link">Điều Khoản Sử Dụng</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="footer-section-title">Liên Hệ</h3>
+            <address class="footer-address">
+              <p>123 Đường Láng, Đống Đa, Hà Nội</p>
+              <p>Email: info@neuwedding.com</p>
+              <p>Phone: (024) 1234 5678</p>
+              <p>Giờ làm việc: 9:00 - 21:00, Thứ 2 - Chủ Nhật</p>
+            </address>
+          </div>
+        </div>
+
+        <div class="footer-copyright">
+          <p class="copyright-text">
+            &copy; <span id="current-year"></span> NEU Wedding Store. Tất cả
+            quyền được bảo lưu.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Cart Data
+      const cartItems = [
+        {
+          id: 1,
+          name: "Váy Cưới Ren Princess",
+          image: "https://picsum.photos/id/64/600/800",
+          price: 25000000,
+          quantity: 1,
+          size: "M",
+        },
+        {
+          id: 3,
+          name: "Vương Miện Pha Lê Royal",
+          image: "https://picsum.photos/id/65/600/800",
+          price: 5000000,
+          quantity: 1,
+          size: "X",
+        },
+      ];
+
+      let couponCode = "";
+      let couponApplied = false;
+      let discount = 0;
+
+      // Format number to Vietnamese currency
+      function formatCurrency(value) {
+        return new Intl.NumberFormat("vi-VN", {
+          style: "currency",
+          currency: "VND",
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 0,
+        }).format(value);
+      }
+
+      // Update quantity of a cart item
+      function updateQuantity(id, newQuantity) {
+        if (newQuantity < 1) return;
+
+        const itemIndex = cartItems.findIndex((item) => item.id === id);
+        if (itemIndex !== -1) {
+          cartItems[itemIndex].quantity = newQuantity;
+          renderCart();
+        }
+      }
+
+      // Remove item from cart
+      function removeItem(id) {
+        const itemIndex = cartItems.findIndex((item) => item.id === id);
+        if (itemIndex !== -1) {
+          cartItems.splice(itemIndex, 1);
+          renderCart();
+        }
+      }
+
+      // Apply coupon code
+      function applyCoupon() {
+        const couponInput = document.getElementById("couponCode");
+        const code = couponInput.value.trim();
+
+        if (code.toUpperCase() === "WEDDING10") {
+          couponApplied = true;
+          discount = 0.1; // 10% discount
+          alert("Mã giảm giá đã được áp dụng!");
+        } else {
+          couponApplied = false;
+          discount = 0;
+          alert("Mã giảm giá không hợp lệ hoặc đã hết hạn!");
+        }
+
+        renderCart();
+      }
+
+      // Calculate cart totals
+      function calculateTotals() {
+        const subtotal = cartItems.reduce(
+          (total, item) => total + item.price * item.quantity,
+          0
+        );
+        const discountAmount = subtotal * discount;
+        const total = subtotal - discountAmount;
+
+        return {
+          subtotal,
+          discountAmount,
+          total,
+        };
+      }
+
+      // Render cart content
+      function renderCart() {
+        const cartContent = document.getElementById("cartContent");
+
+        if (cartItems.length > 0) {
+          const totals = calculateTotals();
+
+          cartContent.innerHTML = `
+                    <div class="cart-layout">
+                        <!-- Cart Items -->
+                        <div class="cart-items-section">
+                            <h2 class="heading-lg mb-6">Sản Phẩm Trong Giỏ Hàng</h2>
+                            <div class="overflow-x-auto">
+                                <table class="cart-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Sản Phẩm</th>
+                                            <th class="text-center">Giá</th>
+                                            <th class="text-center">Số Lượng</th>
+                                            <th class="text-center">Thành Tiền</th>
+                                            <th class="text-center">Xóa</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        ${cartItems
+                                          .map(
+                                            (item) => `
+                                            <tr>
+                                                <td>
+                                                    <div class="cart-item">
+                                                        <div class="cart-item-image">
+                                                            <img src="${
+                                                              item.image
+                                                            }" alt="${
+                                              item.name
+                                            }">
+                                                        </div>
+                                                        <div class="cart-item-details">
+                                                            <h3 class="font-medium">${
+                                                              item.name
+                                                            }</h3>
+                                                            <p class="text-sm text-gray-500">Size: ${
+                                                              item.size
+                                                            }</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">${formatCurrency(
+                                                  item.price
+                                                )}</td>
+                                                <td>
+                                                    <div class="quantity-control">
+                                                        <button class="quantity-btn" onclick="updateQuantity(${
+                                                          item.id
+                                                        }, ${
+                                              item.quantity - 1
+                                            })" ${
+                                              item.quantity <= 1
+                                                ? "disabled"
+                                                : ""
+                                            }>-</button>
+                                                        <input type="text" class="quantity-input" value="${
+                                                          item.quantity
+                                                        }" min="1" onchange="updateQuantity(${
+                                              item.id
+                                            }, parseInt(this.value) || 1)">
+                                                        <button class="quantity-btn" onclick="updateQuantity(${
+                                                          item.id
+                                                        }, ${
+                                              item.quantity + 1
+                                            })">+</button>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center font-medium">
+                                                    ${formatCurrency(
+                                                      item.price * item.quantity
+                                                    )}
+                                                </td>
+                                                <td class="text-center">
+                                                    <button class="remove-btn" onclick="removeItem(${
+                                                      item.id
+                                                    })">✕</button>
+                                                </td>
+                                            </tr>
+                                        `
+                                          )
+                                          .join("")}
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="cart-actions">
+                                <a href="./product.html" class="btn-secondary">Tiếp Tục Mua Sắm</a>
+                            </div>
+                        </div>
+
+                        <!-- Order Summary -->
+                        <div class="order-summary-section">
+                            <h2 class="heading-lg mb-6">Tổng Đơn Hàng</h2>
+                            <div class="order-summary">
+                                <div class="mb-6">
+                                    <div class="summary-row">
+                                        <span>Tạm tính:</span>
+                                        <span class="font-medium">${formatCurrency(
+                                          totals.subtotal
+                                        )}</span>
+                                    </div>
+                                    ${
+                                      couponApplied
+                                        ? `
+                                    <div class="summary-row text-green-600">
+                                        <span>Giảm giá (10%):</span>
+                                        <span>-${formatCurrency(
+                                          totals.discountAmount
+                                        )}</span>
+                                    </div>
+                                    `
+                                        : ""
+                                    }
+                                    <div class="summary-row summary-total">
+                                        <span>Tổng cộng:</span>
+                                        <span>${formatCurrency(
+                                          totals.total
+                                        )}</span>
+                                    </div>
+                                </div>
+
+                                <!-- Coupon -->
+                                <div class="coupon-container">
+                                    <label for="couponCode" class="text-sm font-medium mb-2">Mã Giảm Giá</label>
+                                    <div class="coupon-input">
+                                        <input type="text" id="couponCode" placeholder="Nhập mã giảm giá">
+                                        <button onclick="applyCoupon()">Áp Dụng</button>
+                                    </div>
+                                    <p class="coupon-note">* Nhập mã "WEDDING10" để được giảm 10%</p>
+                                </div>
+
+                                <button class="btn-primary">Tiến Hành Thanh Toán</button>
+
+                                <div class="payment-methods">
+                                    <p>Chúng tôi chấp nhận các phương thức thanh toán:</p>
+                                    <div class="payment-badges">
+                                        <span class="payment-badge">Visa</span>
+                                        <span class="payment-badge">MasterCard</span>
+                                        <span class="payment-badge">Momo</span>
+                                        <span class="payment-badge">Chuyển khoản</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+        } else {
+          cartContent.innerHTML = `
+                    <div class="empty-cart">
+                        <h2 class="heading-lg mb-4">Giỏ Hàng Của Bạn Đang Trống</h2>
+                        <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+                            Hãy khám phá bộ sưu tập váy cưới tuyệt đẹp của chúng tôi và thêm sản phẩm vào giỏ hàng.
+                        </p>
+                        <a href="./product.html" class="btn-primary mx-auto" style="width: auto; display: inline-block; padding: 12px 24px;">
+                            Mua Sắm Ngay
+                        </a>
+                    </div>
+                `;
+        }
+      }
+
+      // Initialize the page
+      document.addEventListener("DOMContentLoaded", function () {
+        renderCart();
+      });
+    </script>
+
+    <script>
+      // Featured Products Data
+      const featuredProducts = [
+        {
+          id: 1,
+          name: "Váy Cưới Ren Princess",
+          image: "https://picsum.photos/id/64/600/800",
+          price: "25.000.000 ₫",
+          category: "Váy Xòe",
+        },
+        {
+          id: 2,
+          name: "Váy Cưới Đuôi Cá Elegance",
+          image: "https://picsum.photos/id/65/600/800",
+          price: "30.000.000 ₫",
+          category: "Váy Đuôi Cá",
+        },
+        {
+          id: 3,
+          name: "Váy Cưới Minimalist Pearl",
+          image: "https://picsum.photos/id/76/600/800",
+          price: "22.000.000 ₫",
+          category: "Váy Tối Giản",
+        },
+        {
+          id: 4,
+          name: "Váy Cưới Công Chúa Royal",
+          image: "https://picsum.photos/id/223/600/800",
+          price: "35.000.000 ₫",
+          category: "Váy Xòe",
+        },
+      ];
+
+      // Render Products
+      const productsGrid = document.getElementById("featured-products-grid");
+
+      featuredProducts.forEach((product) => {
+        const productCard = document.createElement("div");
+        productCard.className = "product-card";
+        productCard.innerHTML = `
+                <a href="./product.html">
+                    <div class="product-image-container">
+                        <img src="${product.image}" alt="${product.name}" class="product-image">
+                        <div class="product-image-overlay"></div>
+                    </div>
+                    <div class="product-view-button">
+                        <a href='./product.html' class="view-button">Xem Chi Tiết</a>
+                    </div>
+                    <div class="product-details">
+                        <div>
+                            <h3 class="product-name">${product.name}</h3>
+                            <p class="product-category">${product.category}</p>
+                        </div>
+                        <p class="product-price">${product.price}</p>
+                    </div>
+                </a>
+            `;
+        productsGrid.appendChild(productCard);
+      });
+    </script>
+  </body>
+</html>
