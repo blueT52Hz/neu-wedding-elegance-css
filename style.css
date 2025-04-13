@@ -54,8 +54,33 @@ ul {
 }
 
 .section-gold {
-  background-color: #b59a6a; /* wedding-gold */
+  background-color: #b59a6a;
   color: white;
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+.section-description {
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: #666;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.section-subtitle {
+  font-size: 24px;
+  margin-bottom: 16px;
 }
 
 /* Featured Products Section */
@@ -381,17 +406,6 @@ ul {
   }
 }
 
-.section-title {
-  font-size: 32px;
-  margin-bottom: 24px;
-}
-
-.section-description {
-  font-size: 16px;
-  margin-bottom: 16px;
-  color: #666;
-}
-
 .section-description .btn {
   display: inline-block;
   padding: 12px 24px;
@@ -411,11 +425,6 @@ ul {
 }
 
 /* Categories Section */
-.section-header {
-  text-align: center;
-  margin-bottom: 48px;
-}
-
 .categories-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -616,22 +625,6 @@ ul {
 }
 
 /* Content Sections */
-.section-title {
-  font-size: 32px;
-  margin-bottom: 24px;
-}
-
-.section-subtitle {
-  font-size: 24px;
-  margin-bottom: 16px;
-}
-
-.section-description {
-  font-size: 16px;
-  margin-bottom: 16px;
-  color: #666;
-}
-
 .text-center {
   text-align: center;
 }
@@ -1320,10 +1313,6 @@ ul {
 /* contact-start ===================================================================== */
 /* Reset and Base Styles */
 /* Utility Classes */
-.section-padding {
-  padding: 80px 0;
-}
-
 .text-center {
   text-align: center;
 }
@@ -2565,10 +2554,6 @@ ul {
 /* faq */
 /* Reset and Base Styles */
 /* Utility Classes */
-.section-padding {
-  padding: 80px 0;
-}
-
 .text-center {
   text-align: center;
 }
@@ -2981,10 +2966,6 @@ details[open] .faq-toggle {
 /* login */
 /* Reset and Base Styles */
 /* Utility Classes */
-.section-padding {
-  padding: 80px 0;
-}
-
 .text-center {
   text-align: center;
 }
