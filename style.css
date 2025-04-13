@@ -32,6 +32,14 @@ ul {
   list-style: none;
 }
 
+/* Container Styles */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 /* Featured Products Section */
 .featured-products {
   padding: 80px 0;
@@ -344,12 +352,6 @@ ul {
   color: white;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 /* About Section */
 .about-content {
   display: flex;
@@ -602,12 +604,6 @@ ul {
   color: white;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 /* Banner */
 .about-banner {
   position: relative;
@@ -858,12 +854,6 @@ ul {
   background-color: white;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 /* Filters */
 .filters-container {
   margin-bottom: 48px;
@@ -995,12 +985,6 @@ ul {
 .blog-section {
   padding: 80px 0;
   background-color: white;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 .blog-content {
@@ -1355,13 +1339,6 @@ ul {
 /* contact-start ===================================================================== */
 /* Reset and Base Styles */
 /* Utility Classes */
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 .section-padding {
   padding: 80px 0;
 }
@@ -1708,15 +1685,6 @@ ul {
 
 /* blog detail start ========================================================== */
 /* Base Styles */
-
-/* Container Styles */
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
 /* Blog Banner */
 .blog-banner {
   position: relative;
@@ -2166,14 +2134,6 @@ ul {
 
 /* blog-detail */
 /* Base Styles */
-/* Container Styles */
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
 /* Blog Banner */
 .blog-banner {
   position: relative;
@@ -2624,13 +2584,6 @@ ul {
 /* faq */
 /* Reset and Base Styles */
 /* Utility Classes */
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 .section-padding {
   padding: 80px 0;
 }
@@ -3047,13 +3000,6 @@ details[open] .faq-toggle {
 /* login */
 /* Reset and Base Styles */
 /* Utility Classes */
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 .section-padding {
   padding: 80px 0;
 }
