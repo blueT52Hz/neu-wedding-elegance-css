@@ -12,6 +12,9 @@ body {
   font-family: "Montserrat", sans-serif;
   line-height: 1.6;
   color: #333;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -23,6 +26,10 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+ul {
+  list-style: none;
 }
 
 /* Featured Products Section */
@@ -72,6 +79,7 @@ img {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
 /* Product Grid */
 .products-grid {
   display: grid;
@@ -206,11 +214,6 @@ img {
 
 /* footer */
 /* Base Styles */
-
-ul {
-  list-style: none;
-}
-
 /* Footer Styles */
 .footer {
   background-color: #f8f4e9; /* wedding-cream */
@@ -322,12 +325,6 @@ ul {
 
 /* index-start ==================================================== */
 /* Base Styles */
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
 
 /* Section Styles */
 .section {
@@ -587,13 +584,6 @@ img {
 
 /* about */
 /* Base Styles */
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
 /* Section Styles */
 .section {
   padding: 80px 0;
@@ -832,13 +822,6 @@ img {
 
 /* product */
 /* Base Styles */
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
 /* Banner */
 .products-banner {
   position: relative;
@@ -978,13 +961,6 @@ img {
 
 /* blog */
 /* Base Styles */
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
 /* Banner */
 .blog-banner {
   position: relative;
@@ -1378,12 +1354,6 @@ img {
 
 /* contact-start ===================================================================== */
 /* Reset and Base Styles */
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 /* Utility Classes */
 .container {
   width: 100%;
@@ -1738,13 +1708,6 @@ img {
 
 /* blog detail start ========================================================== */
 /* Base Styles */
-body {
-  line-height: 1.6;
-  color: #333;
-  margin: 0;
-  padding: 0;
-  background-color: #fff;
-}
 
 /* Container Styles */
 .container {
@@ -2203,14 +2166,6 @@ body {
 
 /* blog-detail */
 /* Base Styles */
-body {
-  line-height: 1.6;
-  color: #333;
-  margin: 0;
-  padding: 0;
-  background-color: #fff;
-}
-
 /* Container Styles */
 .container {
   width: 100%;
@@ -2668,17 +2623,6 @@ body {
 
 /* faq */
 /* Reset and Base Styles */
-
-body {
-  line-height: 1.6;
-  color: #333;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 /* Utility Classes */
 .container {
   width: 100%;
@@ -3102,17 +3046,6 @@ details[open] .faq-toggle {
 
 /* login */
 /* Reset and Base Styles */
-
-body {
-  line-height: 1.6;
-  color: #333;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 /* Utility Classes */
 .container {
   width: 100%;
@@ -3420,17 +3353,6 @@ button {
 
 /* hero-start ======================================= */
 /* Base Styles */
-
-body {
-  line-height: 1.6;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
 /* Hero Section */
 .hero {
   position: relative;
