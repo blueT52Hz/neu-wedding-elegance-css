@@ -40,6 +40,11 @@ ul {
   padding: 0 20px;
 }
 
+/* Section Styles */
+.section {
+  padding: 80px 0;
+}
+
 /* Featured Products Section */
 .featured-products {
   padding: 80px 0;
@@ -334,11 +339,6 @@ ul {
 /* index-start ==================================================== */
 /* Base Styles */
 
-/* Section Styles */
-.section {
-  padding: 80px 0;
-}
-
 .section-cream {
   background-color: #f8f4e9; /* wedding-cream */
 }
@@ -586,11 +586,6 @@ ul {
 
 /* about */
 /* Base Styles */
-/* Section Styles */
-.section {
-  padding: 80px 0;
-}
-
 .section-white {
   background-color: white;
 }
