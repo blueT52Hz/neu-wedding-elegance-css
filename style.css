@@ -45,6 +45,19 @@ ul {
   padding: 80px 0;
 }
 
+.section-white {
+  background-color: white;
+}
+
+.section-cream {
+  background-color: #f8f4e9;
+}
+
+.section-gold {
+  background-color: #b59a6a; /* wedding-gold */
+  color: white;
+}
+
 /* Featured Products Section */
 .featured-products {
   padding: 80px 0;
@@ -338,20 +351,6 @@ ul {
 
 /* index-start ==================================================== */
 /* Base Styles */
-
-.section-cream {
-  background-color: #f8f4e9; /* wedding-cream */
-}
-
-.section-white {
-  background-color: white;
-}
-
-.section-gold {
-  background-color: #b59a6a; /* wedding-gold */
-  color: white;
-}
-
 /* About Section */
 .about-content {
   display: flex;
@@ -586,19 +585,6 @@ ul {
 
 /* about */
 /* Base Styles */
-.section-white {
-  background-color: white;
-}
-
-.section-cream {
-  background-color: #f8f4e9;
-}
-
-.section-gold {
-  background-color: #b59a6a;
-  color: white;
-}
-
 /* Banner */
 .about-banner {
   position: relative;
