@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Váy Cưới Luxury Pearl - NEU Wedding Store</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="./index.html" class="navbar-brand">NEU Wedding Store</a>
+
+        <button
+          class="mobile-menu-button"
+          id="mobileMenuButton"
+          aria-label="Toggle menu"
+        >
+          <span id="menuIcon">☰</span>
+        </button>
+
+        <div class="desktop-nav">
+          <a href="./index.html" class="nav-link" data-path="/">Trang Chủ</a>
+          <a href="./about.html" class="nav-link" data-path="/about"
+            >Giới Thiệu</a
+          >
+          <a href="./product.html" class="nav-link" data-path="/product"
+            >Sản Phẩm</a
+          >
+          <a href="./blog.html" class="nav-link" data-path="/blog">Blog</a>
+          <a href="./contact.html" class="nav-link" data-path="/contact"
+            >Liên Hệ</a
+          >
+          <a href="./faq.html" class="nav-link" data-path="/faq">FAQ</a>
+          <a href="./login.html" class="nav-link" data-path="/login"
+            >Đăng Nhập</a
+          >
+          <a href="./cart.html" class="nav-link" data-path="/cart">Giỏ Hàng</a>
+        </div>
+
+        <div class="mobile-nav" id="mobileNav">
+          <div class="mobile-nav-container">
+            <a href="./index.html" class="mobile-nav-link" data-path="/"
+              >Trang Chủ</a
+            >
+            <a href="./about.html" class="mobile-nav-link" data-path="/about"
+              >Giới Thiệu</a
+            >
+            <a
+              href="./product.html"
+              class="mobile-nav-link"
+              data-path="/products"
+              >Sản Phẩm</a
+            >
+            <a href="./blog.html" class="mobile-nav-link" data-path="/blog"
+              >Blog</a
+            >
+            <a
+              href="./contact.html"
+              class="mobile-nav-link"
+              data-path="/contact"
+              >Liên Hệ</a
+            >
+            <a href="./faq.html" class="mobile-nav-link" data-path="/faq"
+              >FAQ</a
+            >
+            <a href="./login.html" class="mobile-nav-link" data-path="/login"
+              >Đăng Nhập</a
+            >
+            <a href="./career.html" class="mobile-nav-link" data-path="/cart"
+              >Giỏ Hàng</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="product-detail-page">
+      <!-- Product Details -->
+      <section class="section-padding">
+        <div class="container">
+          <div class="product-detail">
+            <!-- Product Images -->
+            <div class="product-images">
+              <div class="main-image">
+                <img
+                  src="https://picsum.photos/id/371/800/1200"
+                  alt="Váy Cưới Luxury Pearl"
+                  id="mainProductImage"
+                />
+              </div>
+              <div class="thumbnail-grid">
+                <div class="thumbnail active" onclick="changeMainImage(0)">
+                  <img
+                    src="https://picsum.photos/id/371/800/1200"
+                    alt="Váy Cưới Luxury Pearl - view 1"
+                  />
+                </div>
+                <div class="thumbnail" onclick="changeMainImage(1)">
+                  <img
+                    src="https://picsum.photos/id/372/800/1200"
+                    alt="Váy Cưới Luxury Pearl - view 2"
+                  />
+                </div>
+                <div class="thumbnail" onclick="changeMainImage(2)">
+                  <img
+                    src="https://picsum.photos/id/373/800/1200"
+                    alt="Váy Cưới Luxury Pearl - view 3"
+                  />
+                </div>
+                <div class="thumbnail" onclick="changeMainImage(3)">
+                  <img
+                    src="https://picsum.photos/id/374/800/1200"
+                    alt="Váy Cưới Luxury Pearl - view 4"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="product-info">
+              <h1 class="heading-lg">Váy Cưới Luxury Pearl</h1>
+              <p class="product-price">40.000.000 ₫</p>
+
+              <div class="mb-6">
+                <p class="body-md text-gray-700 mb-6">
+                  Váy cưới đẳng cấp với chất liệu ren cao cấp nhập khẩu từ Pháp,
+                  đính kết hạt ngọc trai và pha lê Swarovski tỉ mỉ. Thiết kế váy
+                  xòe cổ điển, phần thân trên ôm sát tôn dáng, tay áo dài thanh
+                  lịch. Đuôi váy dài 1m, tạo vẻ sang trọng và quý phái cho cô
+                  dâu.
+                </p>
+                <div class="product-meta">
+                  <div class="flex flex-col">
+                    <span class="meta-label">Kiểu Dáng</span>
+                    <span class="body-md">Váy Xòe</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="meta-label">Phong Cách</span>
+                    <span class="body-md">Cổ điển</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="meta-label">Chất Liệu</span>
+                    <span class="body-md">Ren cao cấp</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="meta-label">Kích Thước</span>
+                    <span class="body-md">XS-XXL (May đo theo số đo)</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-8">
+                <h3 class="heading-sm">Đặc Điểm Nổi Bật</h3>
+                <ul class="feature-list">
+                  <li class="feature-item">
+                    <span class="feature-icon">✓</span>
+                    <span>Chất liệu ren Pháp cao cấp</span>
+                  </li>
+                  <li class="feature-item">
+                    <span class="feature-icon">✓</span>
+                    <span>Đính kết ngọc trai và pha lê Swarovski</span>
+                  </li>
+                  <li class="feature-item">
+                    <span class="feature-icon">✓</span>
+                    <span>Thiết kế cổ thuyền thanh lịch</span>
+                  </li>
+                  <li class="feature-item">
+                    <span class="feature-icon">✓</span>
+                    <span>Tay áo dài tinh tế</span>
+                  </li>
+                  <li class="feature-item">
+                    <span class="feature-icon">✓</span>
+                    <span>Đuôi váy 1m sang trọng</span>
+                  </li>
+                  <li class="feature-item">
+                    <span class="feature-icon">✓</span>
+                    <span>Lớp lót satin mềm mại</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                <a href="./contact.html" class="btn btn-primary"
+                  >Đặt Lịch Hẹn Thử Váy</a
+                >
+                <button class="btn btn-secondary">Thêm vào giỏ hàng</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Additional Info Section -->
+      <section class="py-12 wedding-cream">
+        <div class="container">
+          <div class="mb-12">
+            <h2 class="heading-lg text-center">Thông Tin Chi Tiết</h2>
+            <div class="info-card">
+              <div class="prose">
+                <h3 class="heading-sm">Mô Tả Sản Phẩm</h3>
+                <p class="mb-4">
+                  Váy cưới Luxury Pearl là một trong những thiết kế cao cấp nhất
+                  của NEU Wedding Store, được thiết kế dành riêng cho những cô
+                  dâu yêu thích vẻ đẹp cổ điển và sang trọng.
+                </p>
+                <p class="mb-4">
+                  Với phần thân trên ôm sát, chiếc váy tôn lên đường cong quyến
+                  rũ của cô dâu, trong khi phần váy xòe rộng tạo nên vẻ đẹp quý
+                  phái và lộng lẫy. Tay áo dài được thiết kế tinh tế với chất
+                  liệu ren trong suốt, vừa kín đáo vừa gợi cảm.
+                </p>
+                <p>
+                  Điểm nhấn của chiếc váy chính là những chi tiết đính kết tỉ mỉ
+                  với hạt ngọc trai và pha lê Swarovski, tạo nên vẻ đẹp lấp lánh
+                  cho cô dâu trong ngày trọng đại. Đuôi váy dài 1m giúp cô dâu
+                  thêm phần duyên dáng khi di chuyển.
+                </p>
+
+                <h3 class="heading-sm mt-8">Chất Liệu</h3>
+                <p>
+                  Váy cưới Luxury Pearl sử dụng chất liệu ren Pháp cao cấp được
+                  nhập khẩu trực tiếp, kết hợp với lớp lót satin mềm mại, tạo
+                  cảm giác thoải mái cho người mặc. Các đường may tỉ mỉ và tinh
+                  tế đảm bảo chiếc váy có độ bền cao và form dáng hoàn hảo.
+                </p>
+
+                <h3 class="heading-sm mt-8">Bảng Size Chuẩn</h3>
+                <div class="overflow-x-auto">
+                  <table class="size-table">
+                    <thead>
+                      <tr class="wedding-light-gold">
+                        <th>Size</th>
+                        <th>Vòng Ngực</th>
+                        <th>Vòng Eo</th>
+                        <th>Vòng Hông</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>XS</td>
+                        <td>80cm</td>
+                        <td>60cm</td>
+                        <td>86cm</td>
+                      </tr>
+                      <tr>
+                        <td>S</td>
+                        <td>84cm</td>
+                        <td>64cm</td>
+                        <td>90cm</td>
+                      </tr>
+                      <tr>
+                        <td>M</td>
+                        <td>88cm</td>
+                        <td>68cm</td>
+                        <td>94cm</td>
+                      </tr>
+                      <tr>
+                        <td>L</td>
+                        <td>92cm</td>
+                        <td>72cm</td>
+                        <td>98cm</td>
+                      </tr>
+                      <tr>
+                        <td>XL</td>
+                        <td>96cm</td>
+                        <td>76cm</td>
+                        <td>102cm</td>
+                      </tr>
+                      <tr>
+                        <td>XXL</td>
+                        <td>100cm</td>
+                        <td>80cm</td>
+                        <td>106cm</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p class="mt-4 text-sm text-gray-500">
+                  *Lưu ý: NEU Wedding Store cung cấp dịch vụ may đo theo số đo
+                  của khách hàng để đảm bảo chiếc váy vừa vặn hoàn hảo.
+                </p>
+
+                <h3 class="heading-sm mt-8">Hướng Dẫn Bảo Quản</h3>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li>
+                    Giữ váy trong túi bảo quản chuyên dụng ở nơi khô ráo, thoáng
+                    mát.
+                  </li>
+                  <li>Tránh ánh nắng mặt trời trực tiếp để giữ màu sắc váy.</li>
+                  <li>
+                    Không tự giặt váy cưới, hãy sử dụng dịch vụ giặt khô chuyên
+                    nghiệp.
+                  </li>
+                  <li>
+                    Tránh để váy tiếp xúc với nước, nước hoa, mỹ phẩm hoặc các
+                    chất có thể gây ố vàng.
+                  </li>
+                  <li>
+                    Nếu cần bảo quản lâu dài, nên mang váy đến dịch vụ bảo quản
+                    chuyên nghiệp.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="featured-products">
+      <div class="featured-products-container">
+        <div class="featured-products-header">
+          <h2 class="featured-products-title">Có Thể Bạn Cũng Thích</h2>
+        </div>
+
+        <div class="featured-products-grid" id="featured-products-grid">
+          <!-- Products will be inserted here by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-about">
+            <h3 class="footer-title">NEU Wedding Store</h3>
+            <p class="footer-description">
+              Mang đến vẻ đẹp tinh tế và sang trọng cho ngày trọng đại của bạn.
+            </p>
+            <div class="footer-social-links">
+              <a href="#" class="social-link">
+                <span class="sr-only">Facebook</span>
+                FB
+              </a>
+              <a href="#" class="social-link">
+                <span class="sr-only">Instagram</span>
+                IG
+              </a>
+              <a href="#" class="social-link">
+                <span class="sr-only">Pinterest</span>
+                PT
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="footer-section-title">Liên Kết Nhanh</h3>
+            <ul class="footer-links">
+              <li><a href="./index.html" class="footer-link">Trang Chủ</a></li>
+              <li><a href="./about.html" class="footer-link">Giới Thiệu</a></li>
+              <li><a href="./product.html" class="footer-link">Sản Phẩm</a></li>
+              <li><a href="./blog.html" class="footer-link">Blog</a></li>
+              <li><a href="./contact.html" class="footer-link">Liên Hệ</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="footer-section-title">Thông Tin Thêm</h3>
+            <ul class="footer-links">
+              <li><a href="./faq.html" class="footer-link">FAQ</a></li>
+              <li><a href="./faq.html" class="footer-link">Tài Khoản</a></li>
+              <li>
+                <a href="./career.html" class="footer-link">Tuyển Dụng</a>
+              </li>
+              <li><a href="#" class="footer-link">Chính Sách Bảo Mật</a></li>
+              <li><a href="#" class="footer-link">Điều Khoản Sử Dụng</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="footer-section-title">Liên Hệ</h3>
+            <address class="footer-address">
+              <p>123 Đường Láng, Đống Đa, Hà Nội</p>
+              <p>Email: info@neuwedding.com</p>
+              <p>Phone: (024) 1234 5678</p>
+              <p>Giờ làm việc: 9:00 - 21:00, Thứ 2 - Chủ Nhật</p>
+            </address>
+          </div>
+        </div>
+
+        <div class="footer-copyright">
+          <p class="copyright-text">
+            &copy; <span id="current-year"></span> NEU Wedding Store. Tất cả
+            quyền được bảo lưu.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Product image gallery functionality
+      const productImages = [
+        "https://picsum.photos/id/371/800/1200",
+        "https://picsum.photos/id/372/800/1200",
+        "https://picsum.photos/id/373/800/1200",
+        "https://picsum.photos/id/374/800/1200",
+      ];
+
+      function changeMainImage(index) {
+        // Update main image
+        document.getElementById("mainProductImage").src = productImages[index];
+
+        // Update active thumbnail
+        const thumbnails = document.querySelectorAll(".thumbnail");
+        thumbnails.forEach((thumb, i) => {
+          if (i === index) {
+            thumb.classList.add("active");
+          } else {
+            thumb.classList.remove("active");
+          }
+        });
+      }
+    </script>
+
+    <script>
+      // Featured Products Data
+      const featuredProducts = [
+        {
+          id: 1,
+          name: "Váy Cưới Ren Princess",
+          image: "https://picsum.photos/id/64/600/800",
+          price: "25.000.000 ₫",
+          category: "Váy Xòe",
+        },
+        {
+          id: 2,
+          name: "Váy Cưới Đuôi Cá Elegance",
+          image: "https://picsum.photos/id/65/600/800",
+          price: "30.000.000 ₫",
+          category: "Váy Đuôi Cá",
+        },
+        {
+          id: 3,
+          name: "Váy Cưới Minimalist Pearl",
+          image: "https://picsum.photos/id/76/600/800",
+          price: "22.000.000 ₫",
+          category: "Váy Tối Giản",
+        },
+        {
+          id: 4,
+          name: "Váy Cưới Công Chúa Royal",
+          image: "https://picsum.photos/id/223/600/800",
+          price: "35.000.000 ₫",
+          category: "Váy Xòe",
+        },
+      ];
+
+      // Render Products
+      const productsGrid = document.getElementById("featured-products-grid");
+
+      featuredProducts.forEach((product) => {
+        const productCard = document.createElement("div");
+        productCard.className = "product-card";
+        productCard.innerHTML = `
+            <a href="./product-detail.html">
+                <div class="product-image-container">
+                    <img src="${product.image}" alt="${product.name}" class="product-image">
+                    <div class="product-image-overlay"></div>
+                </div>
+                <div class="product-view-button">
+                    <a href='./product-detail.html' class="view-button">Xem Chi Tiết</a>
+                </div>
+                <div class="product-details">
+                    <div>
+                        <h3 class="product-name">${product.name}</h3>
+                        <p class="product-category">${product.category}</p>
+                    </div>
+                    <p class="product-price">${product.price}</p>
+                </div>
+            </a>
+        `;
+        productsGrid.appendChild(productCard);
+      });
+    </script>
+
+    <script>
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById("mobileMenuButton");
+      const mobileNav = document.getElementById("mobileNav");
+      const menuIcon = document.getElementById("menuIcon");
+
+      let isMenuOpen = false;
+
+      mobileMenuButton.addEventListener("click", () => {
+        isMenuOpen = !isMenuOpen;
+        mobileNav.classList.toggle("open", isMenuOpen);
+        menuIcon.textContent = isMenuOpen ? "✕" : "☰";
+      });
+
+      // Active link highlighting
+      function setActiveLinks() {
+        const currentPath = window.location.pathname;
+
+        // Desktop links
+        document.querySelectorAll(".nav-link").forEach((link) => {
+          const linkPath = link.getAttribute("data-path");
+          if (
+            (linkPath === "/" && currentPath === "/") ||
+            (linkPath !== "/" && currentPath.startsWith(linkPath))
+          ) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
+        });
+
+        // Mobile links
+        document.querySelectorAll(".mobile-nav-link").forEach((link) => {
+          const linkPath = link.getAttribute("data-path");
+          if (
+            (linkPath === "/" && currentPath === "/") ||
+            (linkPath !== "/" && currentPath.startsWith(linkPath))
+          ) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
+        });
+      }
+
+      // Close mobile menu when clicking a link
+      document.querySelectorAll(".mobile-nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          isMenuOpen = false;
+          mobileNav.classList.remove("open");
+          menuIcon.textContent = "☰";
+        });
+      });
+
+      // Initialize active links
+      window.addEventListener("load", setActiveLinks);
+      window.addEventListener("popstate", setActiveLinks);
+    </script>
+
+    <script>
+      // Set current year in copyright
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
+</html>
