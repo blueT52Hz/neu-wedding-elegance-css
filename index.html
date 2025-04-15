@@ -472,23 +472,23 @@
         const productCard = document.createElement("div");
         productCard.className = "product-card";
         productCard.innerHTML = `
-                    <a href="./product.html">
-                        <div class="product-image-container">
-                            <img src="${product.image}" alt="${product.name}" class="product-image">
-                            <div class="product-image-overlay"></div>
-                        </div>
-                        <div class="product-view-button">
-                            <a href='./product.html' class="view-button">Xem Chi Tiết</a>
-                        </div>
-                        <div class="product-details">
-                            <div>
-                                <h3 class="product-name">${product.name}</h3>
-                                <p class="product-category">${product.category}</p>
-                            </div>
-                            <p class="product-price">${product.price}</p>
-                        </div>
-                    </a>
-                `;
+            <a href="./product-detail.html">
+                <div class="product-image-container">
+                    <img src="${product.image}" alt="${product.name}" class="product-image">
+                    <div class="product-image-overlay"></div>
+                </div>
+                <div class="product-view-button">
+                    <a href='./product-detail.html' class="view-button">Xem Chi Tiết</a>
+                </div>
+                <div class="product-details">
+                    <div>
+                        <h3 class="product-name">${product.name}</h3>
+                        <p class="product-category">${product.category}</p>
+                    </div>
+                    <p class="product-price">${product.price}</p>
+                </div>
+            </a>
+        `;
         productsGrid.appendChild(productCard);
       });
     </script>
