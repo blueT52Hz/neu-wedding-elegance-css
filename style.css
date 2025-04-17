@@ -104,6 +104,14 @@ ul {
   font-size: 24px;
   font-weight: 700;
   color: #b59a6a; /* wedding-gold */
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-logo {
+  width: 32px;
+  height: 32px;
 }
 
 /* Desktop Navigation */
